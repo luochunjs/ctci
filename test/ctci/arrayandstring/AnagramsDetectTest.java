@@ -25,12 +25,17 @@ public class AnagramsDetectTest {
     @Test
     public void testSameDoubleString() {
         boolean result = AnagramsDetect.detect("12", "12");
-        assertFalse(result);
+        assertTrue(result);
     }
 
     @Test
     public void testLongString() {
         assertTrue(AnagramsDetect.detect("1234567", "7654321"));
+    }
+
+    @Test
+    public void testRandom() {
+        assertTrue(AnagramsDetect.detect("1234567", "3425617"));
     }
 
 }
